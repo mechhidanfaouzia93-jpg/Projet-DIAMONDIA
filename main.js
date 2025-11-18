@@ -54,3 +54,32 @@ BUTTONS.forEach((button) => {
     });
 });
 
+
+
+
+
+const CARDS = document.querySelectorAll('.card');
+
+let cardOne ;
+let cardTwo ;
+
+function flipCard(e){
+    let clickedCard = e.target ; // getting user clicked card
+    
+
+    if(clickedCard !== cardOne){
+        clickedCard.classList.add('flip');
+        if( !cardOne){
+            // on affecte la valeur de la carte 1 à la clickCard
+            return cardOne = clickedCard ;
+        }
+
+    }
+    
+    cardTwo = clickedCard ;
+
+}
+
+CARDS.forEach((card) =>{
+    card.addEventListener('click', flipCard)
+})
