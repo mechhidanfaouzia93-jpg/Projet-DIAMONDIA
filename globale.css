@@ -1,16 +1,21 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-:root{
-    --bg: #f2f2f2 ;
-    --blue-profond: #2987bc ; /*Header,boutons,titres*/
-    --bleu-clair : #2da6d4 ; /*Survols, reflets*/
-    --or-doux : #c5a572  ; /*Bordures, survols 
+
+:root {
+    --bg: #f2f2f2;
+    --blue-profond: #3763a1;
+    /*Header,boutons,titres*/
+    --bleu-clair: #2da6d4;
+    /*Survols, reflets*/
+    --or-doux: #c5a572;
+    /*Bordures, survols 
     luxueux*/
 }
-body{
+
+body {
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -18,11 +23,13 @@ body{
     gap: 2rem;
     background-color: var(--bg);
 }
+
 .sombre {
     background-color: black;
     color: white;
 }
-header{
+
+header {
     width: 100%;
     height: 5rem;
     display: flex;
@@ -31,91 +38,203 @@ header{
     align-items: center;
     gap: 2rem;
     background-color: var(--blue-profond);
-    ul{
+
+    ul {
         list-style: none;
         display: flex;
         gap: 2rem;
-        li{
+
+        li {
             text-decoration: none;
-            &:hover{
+
+            &:hover {
                 background-color: var(--bleu-clair);
             }
-            a{
+
+            a {
                 text-decoration: none;
-               font-size: 1.5rem;
+                font-size: 1.5rem;
                 color: black;
 
             }
         }
     }
-    #sombre{
-        background-color : transparent;
+
+    #sombre {
+        background-color: transparent;
         border: none;
         cursor: pointer;
         font-size: 2rem;
     }
 }
-section{
-    display: flex;
 
+section {
+    display: flex;
+    margin: 1rem;
+    justify-content: center;
+    gap: 2rem;
 }
-.text-caro{
+
+.text-caro {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 1rem;
     text-align: center;
-    /* background-color: #2da6d4; */
-    font-family: ;
-    h1{
+    font-family: Arial, sans-serif;
+
+    h1 {
         font-size: 3rem;
         margin-bottom: 1rem;
     }
 }
-.carousel{
+
+.carousel {
     height: 100vh;
     width: 50vw;
     position: relative;
-    .slide{
+
+    .slide {
         position: absolute;
         height: 100%;
         width: 100%;
         opacity: 0;
 
     }
-    .slide img{
+    ul {
+        padding: 0;
+        margin: 0;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        /* Animation fluide */
+        transition: transform 0.5s ease-in-out;
+        
+    }
+    li {
+        list-style: none;
+
+    }
+
+    .slide img {
         display: block;
         height: 100%;
         width: 100%;
         object-fit: cover;
 
-      
+
     }
-    button{
+
+    button {
         position: absolute;
         background: none;
         border: none;
         outline: none;
         font-size: 2.6rem;
-        z-index: 2;
+        z-index: 10;
         cursor: pointer;
         color: var(--blue-profond);
         transform: translateY(-50%);
         top: 50%;
-        
+
     }
-    #prev{
+
+    #prev {
         left: 0.3rem;
     }
-    #next{
+
+    #next {
         right: 0.3rem;
     }
-    li{
-        list-style: none;
+
+}
+
+.slide {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+
+}
+
+.slide:not(.active) {
+    opacity: 0;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+li {
+    list-style: none;
+}
+
+/*page d'accueil card explication*/
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+
+    p {
+        padding: 1rem;
+        margin: 1.5rem;
+        width: 20%;
+        height: 10rem;
+        border: 2px solid var(--blue-profond);
+        box-shadow: var(--bleu-clair) 0px 54px 55px, var(--or-doux) 0px -12px 30px, var(--bleu-clair) 0px 4px 6px, var(--bleu-clair) 0px 12px 13px, var(--bleu-clair) 0px -3px 5px;
+        border-radius: 1.5rem;
 
     }
 }
-.slide .active{
-    opacity: 1;
+
+.gems {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
 }
+
+.info-pierre {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-weight: 1.5rem;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    /* border-bottom: 2px solid var(--or-doux); */
+    margin: 2rem;
+
+    img {
+        width: 25%;
+        min-height: 5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
