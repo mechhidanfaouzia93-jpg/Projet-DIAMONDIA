@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Pierres Précieuses</title>
+    <link rel="stylesheet" href="./quiz.css">
+    <link rel="stylesheet" href="./globale.css">
+    <script src="./main.js"></script>
+    <script defer src="./quiz.js"></script>
+</head>
+
+<body>
+       <header>
+        <nav>
+            <div>
+                <img src="" alt="Logo">
+            </div>
+            <div>
+                <ul class="links" id="links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="#informations">Informations</a></li>
+                    <li><a href="jeux.html">Jeux</a></li>
+                    <li><a href="#pierres">Pierres</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <button id="sombre">🌙</button>
+            </div>
+        </nav>
+    </header>
+      <!-- Écran de démarrage -->
+    <div id="start-screen" class="screen active">
+        <div class="container">
+            <div class="header-icon">💎</div>
+            <h1>Quiz Pierres Précieuses</h1>
+            <p class="start-info">Testez vos connaissances sur les pierres précieuses !</p>
+            <input type="text" id="player-name" placeholder="Entrez votre nom (optionnel)" maxlength="20">
+            <button class="btn btn-primary" onclick="startQuiz()">Commencer le Quiz</button>
+        </div>
+    </div>
+
+    <!-- Écran du quiz -->
+    <div id="quiz-screen" class="screen">
+        <div class="container">
+            <div class="quiz-header">
+                <div>Question <span id="current">1</span>/<span id="total">10</span></div>
+                <div>Score: <span id="score">0</span></div>
+            </div>
+            <div class="progress-bar">
+                <div id="progress" class="progress-fill"></div>
+            </div>
+            <div class="question" id="question"></div>
+            <div class="options" id="options"></div>
+            <div class="explanation" id="explanation">
+                <h3 id="exp-title"></h3>
+                <p id="exp-text"></p>
+            </div>
+            <button class="btn btn-primary hidden" id="next-btn" onclick="nextQuestion()">
+                Question Suivante →
+            </button>
+        </div>
+    </div>
+
+    <!-- Écran des résultats -->
+    <div id="result-screen" class="screen">
+        <div class="container">
+            <div class="result-icon" id="result-icon">🏆</div>
+            <h1>Quiz Terminé !</h1>
+            <div class="final-score">
+                <div class="score-big" id="final-score">0/10</div>
+                <div class="score-percentage" id="percentage">0%</div>
+            </div>
+            <p class="result-message" id="message"></p>
+            <div class="recap" id="recap"></div>
+            <button class="btn btn-primary" onclick="restartQuiz()">Recommencer</button>
+        </div>
+    </div>
+
+ <footer>
+        <p>&copy; 2025 DIAMONDIA. Tous droits réservés.</p>
+        <div class="socials">
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://fr.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/?locale=fr_FR"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>

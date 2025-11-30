@@ -12,75 +12,132 @@
 
 <body>
     <header>
-        <div>
-            <img src="" alt="">
-        </div>
-        <div>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="">A propos</a></li>
-                <li><a href="">Jeux</a></li>
-                <li><a href="">informations</a></li>
-            </ul>
-        </div>
-        <div> 
-            <button id="sombre" class="">🌙</button>
-            <button class="burger-menu"><i class="fa-solid fa-bars"></i></button>
-        </div>
+        <nav>
+            <div>
+                <img src="" alt="">
+            </div>
+            <div>
+                <ul class="links" id="links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="#informations">Informations</a></li>
+                    <li><a href="./jeux.html">Jeux</a></li>
+                    <li><a href="#pierres">Pierres</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <button id="sombre" class="">🌙</button>
+            </div>
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
     </header>
     <main>
-        <h2>Notre Collection de Diamants</h2>
         <section>
-            
+
             <div class="text-caro">
                 <h1>DIAMONDIA</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum, cumque fugit labore repellendus accusamus quam rerum amet! Dicta quos </p>
+                <p>Découvrez l'excellence des pierres précieuses les plus rares et les plus belles du monde </p>
+                <p>Chaque pierre est soigneusement sélectionnée pour sa pureté, son éclat et sa rareté. Les diamants
+                    proviennent des mines les plus prestigieuses du monde et sont certifiés par les plus grands
+                    laboratoires gemmologiques.</p>
             </div>
             <div class="carousel">
                 <button class="btn" id="prev">◀</button>
                 <button class="btn" id="next">▶</button>
                 <ul>
                     <li class="slide active">
-                        <img src="./images/Cut_Ruby.jpg" alt="">
+                        <img src="./images/form-pierre-precieuse.jpg" alt="">
                     </li>
                     <li class="slide">
-                        <img src="./images/pexels-xavvior-34703308.jpg" alt="">
+                        <img src="./images/diamant-vert.jpg" alt="">
                     </li>
                     <li class="slide">
-                        <img src="./images/pierre-vectoriel.jpg" alt="">
+                        <img src="./images/pierres-precieuses.jpg" alt="">
                     </li>
                     <li class="slide">
-                        <img src="./images/pierres.webp" alt="">
+                        <img src="./images/broche-vert.jpg" alt="">
                     </li>
                     <li class="slide">
-                        <img src="./images/Ruby_cristal.jpg" alt="">
+                        <img src="./images/gazelle-diamant.jpg" alt="">
                     </li>
                 </ul>
             </div>
         </section>
-        <h2>Informations sur le Diamant</h2>
-        <section>
-         
 
-            <div class="card">
-                <p>Comment se forme un diamant ?</p>
-                <p>Les différentes tailles</p>
-                <p>Les 4C du diamant Carat (poids), Color (couleur), Clarity (pureté) et Cut (taille)</p>
-                <p>Diamant naturel vs synthétique</p>
-                <p>Diamants célèbres</p>
-                <p>Diamant Brillant Rond – 1 Carat</p>
-                <p>Diamant Princesse – 0,7 Carat</p>
-                <p>Diamant Ovale – 0,9 Carat</p>
+        <section>
+
+            <div class="card" id="informations">
+                <h2>Tout Savoir sur les Diamants</h2>
+                <div class="container-cards">
+                    <div class="info-card">
+                        <h4>🌋 Formation des Diamants</h4>
+                        <p>
+                            Les diamants se forment à plus de 150 km sous la surface terrestre, sous une pression et une
+                            température extrêmes, pendant des milliards d'années. Ils remontent à la surface lors
+                            d'éruptions
+                            volcaniques.
+                        </p>
+                    </div>
+                    <div class="info-card">
+                        <h4>💎 Les 4C du Diamant</h4>
+                        <p>
+                            Carat (poids), Color (couleur), Clarity (pureté) et Cut (taille).<br> Ces critères
+                            déterminent
+                            la
+                            qualité et la valeur d'un diamant.</p>
+
+                    </div>
+                    <div class="info-card">
+                        <h4>✂️ Tailles de Diamants</h4>
+                        <p>
+                            Brillant rond, Princesse, Ovale, Coussin, Émeraude, Poire, Marquise, Radiant... Chaque
+                            taille
+                            révèle
+                            différemment la beauté naturelle du diamant.Diamant naturel vs synthétique
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>🔬 Naturel vs Synthétique</h4>
+                        <p>
+                            Les diamants naturels mettent des milliards d'années à se former. Les synthétiques sont
+                            créés en
+                            laboratoire en quelques semaines, mais restent de vrais diamants chimiquement.
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>👑 Diamants Célèbres</h4>
+                        <p>
+                            Le Hope (45,52 carats), le Koh-i-Noor (105,6 carats), le Régent (140,64 carats)... Des
+                            pierres
+                            légendaires qui ont marqué l'histoire.
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>📊 Certifications</h4>
+                        <p>
+                            GIA, IGI, HRD... Les laboratoires internationaux certifient l'authenticité et la qualité de
+                            chaque
+                            diamant avec un rapport détaillé.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
-        <h2>Pierres Précieuses</h2>
-        <section class="gems">
-            
+        <h2>Galerie des Pierres Précieuses</h2>
+        <section class="gems" id="pierres">
+
             <div class="info-pierre">
                 <h6>ALEXANDRITE</h6>
                 <img src="./images/alexendrite-gem.png" alt="alexandrite-gem">
             </div>
-        
+
             <div class="info-pierre">
                 <h6>AMBER</h6>
                 <img src="./images/amber-gems.png" alt="amber-gems">
@@ -133,7 +190,32 @@
                 <h6>KUNZITE</h6>
                 <img src="./images/kunzite-gem.png" alt="kunzite-gem">
             </div>
-        
+
+        </section>
+        <section>
+            <form id="comment-form">
+                <img src="./images/form-pierre-precieuse.jpg" alt="photo des pierre- Précieuses" class="background">
+                <div id="commentsList">
+                    <!-- Les commentaires seront affichés ici -->
+                </div>
+                <div class="form-remarque">
+
+                    <label for="type">Type de commentaire :</label>
+                    <select id="type" required>
+                        <option value="message">Message</option>
+                        <option value="question">Question</option>
+                        <option value="avis">Avis</option>
+                        <option value="suggestion">Suggestion</option>
+                    </select>
+
+                    <label for="content">Commentaire :</label>
+                    <textarea id="content" placeholder="Entrez votre commentaire" required></textarea>
+
+                    <button type="button" id="sendBtn">Envoyer votre commentaire</button>
+                </div>
+                
+            </form>
+
         </section>
     </main>
     <footer>
