@@ -31,7 +31,7 @@ body {
 
 header {
     width: 100%;
-   background: linear-gradient(135deg, rgba(30, 58, 138, 0.9), rgba(59, 130, 246, 0.9));
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.9), rgba(59, 130, 246, 0.9));
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
     top: 0;
@@ -255,7 +255,7 @@ li {
 }
 
 /*page d'accueil card explication*/
-section .card{
+section .card {
     background-color: white;
 }
 
@@ -311,7 +311,7 @@ h2 {
 
 
     p {
-        color: var(--text-light);
+        color: var(--blue-profond);
         line-height: 1.8;
     }
 
@@ -367,17 +367,17 @@ h2 {
     h6 {
         font-size: 1.2rem;
         margin-top: 0.5rem;
-        text-align:center;
+        text-align: center;
         color: var(--blue-profond);
         /* font-weight: 600; */
-        
+
     }
 
     &:hover {
         transform: scale(1.05);
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     }
-   
+
 }
 
 
@@ -421,6 +421,7 @@ form {
     margin: 10px 0;
     color: var(--bleu-clair);
 }
+
 /* Style global du formulaire */
 
 .background {
@@ -462,7 +463,7 @@ form {
         box-shadow: var(--bg) 0px 54px 55px, var(--bg) 0px -12px 30px, var(--bg) 0px 4px 6px, var(--blue-profond) 0px 12px 13px, var(--bg) 0px -3px 5px;
         padding: 0.7rem 1rem;
         border: none;
-        background-color: var(--bg);
+        background-color: var(--blue-profond);
     }
 
     textarea {
@@ -495,8 +496,7 @@ form {
         }
 
         &:hover {
-            background-color: var(--blue-profond);
-            color: white;
+            background-color: var(--bleu-clair);
             transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
@@ -524,31 +524,34 @@ form {
     transition: background-color 0.3s;
     width: 20rem;
     text-align: center;
-    
-        box-shadow: var(--bg) 0px 54px 55px, var(--bg) 0px -12px 30px, var(--bleu-clair) 0px 4px 6px, var(--or-doux) 0px 12px 13px, var(--bleu-clair) 0px -3px 5px;
+
+    box-shadow: var(--bg) 0px 54px 55px, var(--bg) 0px -12px 30px, var(--bleu-clair) 0px 4px 6px, var(--or-doux) 0px 12px 13px, var(--bleu-clair) 0px -3px 5px;
+
     &:hover {
-    background-color: var(--bleu-clair);
+        background-color: var(--bleu-clair);
+    }
 }
+
+.jeux {
+    background: linear-gradient(135deg, var(--bg), var(--blue-profond));
 }
-.jeux{
-    background: linear-gradient(135deg,var(--bg),var(--blue-profond));
-}
-.jeux  h1 {
+
+.jeux h1 {
     text-align: center;
     color: var(--blue-profond);
-        font-size: 3rem;
-        margin: 2rem 0;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    }
-    
+    font-size: 3rem;
+    margin: 2rem 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
 
 .jeux p {
     color: var(--bleu-clair);
     text-align: center;
-        font-size: 1.5rem;
-        max-width: 700px;
-        margin: 2rem auto;
-    }
+    font-size: 1.5rem;
+    max-width: 700px;
+    margin: 2rem auto;
+}
 
 
 
