@@ -18,6 +18,8 @@
 
 body {
     display: flex;
+    flex-direction: column;
+    gap: 5rem;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
@@ -34,7 +36,6 @@ header {
     width: 100%;
     background: linear-gradient(135deg, rgba(30, 58, 138, 0.9), rgba(59, 130, 246, 0.9));
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    top: 0;
 
     nav {
 
@@ -125,38 +126,9 @@ header {
 
 }
 
-section {
-    display: flex;
-    margin: 1rem;
-    justify-content: center;
-    gap: 2rem;
-
-    @media(max-width:640px) {
-        display: flex;
-        flex-direction: column;
-
-    }
-}
-
-.text-caro {
-    background: linear-gradient(135deg, rgba(30, 58, 138, 0.9), rgba(59, 130, 246, 0.9));
-    color: white;
-    padding: 6rem 2rem;
-    text-align: center;
-    background-size: cover;
-    background-position: center;
-
-    h1 {
-        font-size: 4rem;
-        margin: 2rem 0;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    }
-
-    p {
-        font-size: 1.5rem;
-        max-width: 700px;
-        margin: 2rem auto;
-    }
+main{
+    flex-grow: 1;
+    flex-direction: column;
 }
 
 .wrapper {
@@ -172,6 +144,7 @@ section {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    perspective: 1000px;
 
 
     .card {

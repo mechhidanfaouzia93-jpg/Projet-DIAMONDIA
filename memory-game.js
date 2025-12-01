@@ -1,105 +1,113 @@
+//theme sombre fuction
+
+// const THEME_SOMBRE = document.getElementById('sombre');
+
+// THEME_SOMBRE.addEventListener('click', () => {
+//     const SOMBRE = document.body;
+
+//     SOMBRE.classList.toggle('sombre');
+//     if (THEME_SOMBRE.innerHTML === '🌚') {
+//         THEME_SOMBRE.innerHTML === '🌞';
+//     }
+//     else {
+//         THEME_SOMBRE.innerHTML === '🌚'
+//     }
+// });
+
+// const LINKS = document.getElementById('links');
+// const BURGER = document.getElementById('burger');
+
+// BURGER.addEventListener('click', () => {
+//     LINKS.classList.toggle('active');
+// });
+
 //jeux de cartes (memory game)
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.card'); // Sélectionne toutes les cartes
 
+    let cardOne = null;
+    let cardTwo = null;
+    let lockBoard = false;
+    let matchedPairs = 0;
 
-const CARDS = document.querySelectorAll(".card");
+    // Ajoute un événement au clic sur chaque carte
+    cards.forEach(card => card.addEventListener('click', flipCard));
 
-let cardOne = null;
-let cardTwo = null;
-let lockBoard = false;
-let matchedPairs = 0;
+    function flipCard(e) {
+        let clickedCard = e.currentTarget; // La carte cliquée
 
+        // Si la carte cliquée est déjà la première ou si le board est verrouillé
+        if (clickedCard === cardOne || lockBoard) return;
 
-
-function flipCard(e) {
-    let clickedCard = e.currentTarget; // la carte cliquée
-
-    // si la carte cliquée n'est pas la carte 1 et que le deck n'est pas desactivé
-    if (clickedCard === cardOne || lockBoard) return;// éviter de cliquer deux fois sur la même carte et si le board est verrouillé, on ne peut pas cliquer sur une carte
-        clickedCard.classList.add("flip");
+        clickedCard.classList.add("flip"); // Retourne la carte
 
         if (!cardOne) {
-            // on affecte la valeur de la carte 1 à la clickCard
+            // On assigne la première carte
             cardOne = clickedCard;
             return;
         }
 
-        cardTwo = clickedCard;
-        lockBoard = true;
+        cardTwo = clickedCard; // Assigne la deuxième carte
+        lockBoard = true; // Verrouille le board pour empêcher d'autres clics
 
         const IMG1 = cardOne.querySelector("img").src;
         const IMG2 = cardTwo.querySelector("img").src;
 
-        checkMatch(IMG1, IMG2);
-
+        checkMatch(IMG1, IMG2); // Vérifie si les images correspondent
     }
 
-// fonction pour vérifier si les cartes correspondent
+    function checkMatch(IMG1, IMG2) {
+        if (IMG1 === IMG2) { // Si les images sont identiques
+            matchedPairs++; // Incrémente le compteur de paires trouvées
 
-function checkMatch(IMG1, IMG2) {
-    if (IMG1 === IMG2) { // si les images sont identiques
-        matchedPairs++; // on incrémente le compteur de paires trouvées
+            cardOne.removeEventListener("click", flipCard); // Enlève l'événement de clic de la première carte
+            cardTwo.removeEventListener("click", flipCard); // Enlève l'événement de clic de la deuxième carte
 
-        cardOne = removeEventListener("click", flipCard);
-        cardTwo = removeEventListener("click", flipCard);
+            cardOne = cardTwo = null; // Réinitialise les cartes
+            lockBoard = false; // Déverrouille le board
 
-        cardOne = cardTwo = null;
-        lockBoard = false;
-
-        if (matchedPairs === 8) { // si toutes les paires sont trouvées
-
-            // victoire !
-            setTimeout(() => {
-                alert('Bravo ! vous avez trouvé toutes les paires !');
-
-                shuffleCard();
-            }, 500);
-
+            if (matchedPairs === 8) { // Si toutes les paires sont trouvées
+                setTimeout(() => {
+                    alert('Bravo ! Vous avez trouvé toutes les paires !');
+                    shuffleCard();
+                }, 500);
+            }
+            return;
         }
 
-        return;
+        // Si les cartes ne correspondent pas
+        setTimeout(() => {
+            cardOne.classList.add("shake");
+            cardTwo.classList.add("shake");
+        }, 400);
+
+        setTimeout(() => {
+            cardOne.classList.remove("shake", "flip");
+            cardTwo.classList.remove("shake", "flip");
+            cardOne = cardTwo = null;
+            lockBoard = false;
+        }, 1200);
     }
 
-    setTimeout(()=>{
-        cardOne.classList.add("shake");
-        cardTwo.classList.add("shake");
-    },400);
-
-
-    // si les images ne sont pas identiques
-    setTimeout(() => {
-        cardOne.classList.remove("shake", "flip");
-        cardTwo.classList.remove("shake", "flip");
-        cardOne = cardTwo = null;
+    function shuffleCard() {
+        matchedPairs = 0;
         lockBoard = false;
+        cardOne = cardTwo = null;
 
-    }, 1200);
+        // Tableau avec les valeurs des cartes (paires)
+        let ArrayCards = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
+        ArrayCards.sort(() => Math.random() - 0.5); // Mélange les cartes aléatoirement
 
-}
+        // Réinitialise les cartes
+        cards.forEach((card, index) => {
+            card.classList.remove("flip", "shake"); // Réinitialise les classes "flip" et "shake"
+            const img = card.querySelector("img");
+            img.src = `./MemoryCardGameImages/img-${ArrayCards[index]}.png`; // Assigne une image à chaque carte
+        });
 
-function shuffleCard() {
+        // Réinitialise les événements de clic
+        cards.forEach(card => card.addEventListener("click", flipCard));
+    }
 
-    matchedPairs = 0;
-    lockBoard = false;
-    cardOne = cardTwo = null;
-    // création d'un tableau avec les valeurs des cartes
-    let ArrayCards = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
-    ArrayCards.sort(() => Math.random() - 0.5); // mélanger les cartes aléatoirement 
-
-
-
-    // enlever la classe flip de chaque carte et assigner une image à chaque carte
-    CARDS.forEach((card, index) => {
-        card.classList.remove("flip", "shake");
-        const img = card.querySelector("img");
-        img.src = `./MemoryCardGameImages/img-${ArrayCards[index]}.png`; // assigner une image à chaque carte
-
-        // enlever pour éviter doublons d'écouteurs
-        card.replaceWith(card.cloneNode(true));
-    });
-     // après clone, on doit récupérer les nouvelles cartes
-    const newCards = document.querySelectorAll(".card");
-    newCards.forEach(card => card.addEventListener("click", flipCard));
-};
-
-
-shuffleCard();
+    shuffleCard(); // Mélange les cartes au démarrage
+});

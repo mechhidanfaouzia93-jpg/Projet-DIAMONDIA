@@ -7,6 +7,7 @@
     <title>DIAMONDIA</title>
     <link rel="stylesheet" href="./globale.css">
     <script defer src="./main.js"></script>
+    <!-- <script defer src="./galery-pierre.js"></script> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 </head>
 
@@ -74,7 +75,7 @@
                 <h2>Tout Savoir sur les Diamants</h2>
                 <div class="container-cards">
                     <div class="info-card">
-                        <h4>🌋 Formation des Diamants</h4>
+                        <h4>Formation des Diamants</h4>
                         <p>
                             Les diamants se forment à plus de 150 km sous la surface terrestre, sous une pression et une
                             température extrêmes, pendant des milliards d'années. Ils remontent à la surface lors
@@ -83,7 +84,7 @@
                         </p>
                     </div>
                     <div class="info-card">
-                        <h4>💎 Les 4C du Diamant</h4>
+                        <h4>Les 4C du Diamant</h4>
                         <p>
                             Carat (poids), Color (couleur), Clarity (pureté) et Cut (taille).<br> Ces critères
                             déterminent
@@ -92,7 +93,7 @@
 
                     </div>
                     <div class="info-card">
-                        <h4>✂️ Tailles de Diamants</h4>
+                        <h4>Tailles de Diamants</h4>
                         <p>
                             Brillant rond, Princesse, Ovale, Coussin, Émeraude, Poire, Marquise, Radiant... Chaque
                             taille
@@ -102,7 +103,7 @@
                     </div>
 
                     <div class="info-card">
-                        <h4>🔬 Naturel vs Synthétique</h4>
+                        <h4> Naturel vs Synthétique</h4>
                         <p>
                             Les diamants naturels mettent des milliards d'années à se former. Les synthétiques sont
                             créés en
@@ -111,7 +112,7 @@
                     </div>
 
                     <div class="info-card">
-                        <h4>👑 Diamants Célèbres</h4>
+                        <h4> Diamants Célèbres</h4>
                         <p>
                             Le Hope (45,52 carats), le Koh-i-Noor (105,6 carats), le Régent (140,64 carats)... Des
                             pierres
@@ -120,7 +121,7 @@
                     </div>
 
                     <div class="info-card">
-                        <h4>📊 Certifications</h4>
+                        <h4>Certifications</h4>
                         <p>
                             GIA, IGI, HRD... Les laboratoires internationaux certifient l'authenticité et la qualité de
                             chaque
@@ -192,7 +193,39 @@
             </div>
 
         </section>
-        <section>
+        <!-- MODAL -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close-btn" id="close-modal">×</button>
+                <img id="modal-img" src="" alt="">
+                <h3 id="modal-title"></h3>
+                <p id="modal-subtitle"></p>
+            </div>
+            <div class="modal-body">
+                <div class="info-section">
+                    <h4><i class="fas fa-book"></i> Description</h4>
+                    <p id="modal-description"></p>
+                </div>
+
+                <div class="info-section">
+                    <h4><i class="fas fa-map-marker-alt"></i> Origine</h4>
+                    <p id="modal-origine"></p>
+                </div>
+
+                <div class="info-section">
+                    <h4><i class="fas fa-gem"></i> Propriétés</h4>
+                    <div class="properties" id="modal-properties"></div>
+                </div>
+
+                <div class="info-section">
+                    <h4><i class="fas fa-heart"></i> Vertus et Significations</h4>
+                    <p id="modal-vertus"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+        <section id="contact">
             <form id="comment-form">
                 <img src="./images/form-pierre-precieuse.jpg" alt="photo des pierre- Précieuses" class="background">
                 <div id="commentsList">
