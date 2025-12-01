@@ -588,6 +588,14 @@ form {
         opacity: 1;
     }
 }
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
 
 .modal-content {
     background: white;
@@ -722,6 +730,37 @@ form {
         font-size: 2rem;
     }
 }
+
+@media (max-width: 640px) {
+
+    .quiz-container {
+        width: 90%;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+
+    .option {
+        flex-direction: row;
+        font-size: 1rem;
+        padding: 0.6rem;
+    }
+
+    .option-letter {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    #question {
+        font-size: 1.2rem;
+    }
+
+    #next-btn {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+}
+
 
 
 
