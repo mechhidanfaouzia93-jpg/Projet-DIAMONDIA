@@ -1,3 +1,23 @@
+const THEME_SOMBRE = document.getElementById('sombre');
+
+THEME_SOMBRE.addEventListener('click', () => {
+    const SOMBRE = document.body;
+
+    SOMBRE.classList.toggle('sombre');
+    if (THEME_SOMBRE.innerHTML === '🌚') {
+        THEME_SOMBRE.innerHTML === '🌞';
+    }
+    else {
+        THEME_SOMBRE.innerHTML === '🌚'
+    }
+});
+
+const LINKS = document.getElementById('links');
+const BURGER = document.getElementById('burger');
+
+BURGER.addEventListener('click', () => {
+    LINKS.classList.toggle('active');
+});
 
 // Les questions du quiz
 const questions = [

@@ -1,25 +1,25 @@
 //theme sombre fuction
 
-// const THEME_SOMBRE = document.getElementById('sombre');
+const THEME_SOMBRE = document.getElementById('sombre');
 
-// THEME_SOMBRE.addEventListener('click', () => {
-//     const SOMBRE = document.body;
+THEME_SOMBRE.addEventListener('click', () => {
+    const SOMBRE = document.body;
 
-//     SOMBRE.classList.toggle('sombre');
-//     if (THEME_SOMBRE.innerHTML === '🌚') {
-//         THEME_SOMBRE.innerHTML === '🌞';
-//     }
-//     else {
-//         THEME_SOMBRE.innerHTML === '🌚'
-//     }
-// });
+    SOMBRE.classList.toggle('sombre');
+    if (THEME_SOMBRE.innerHTML === '🌚') {
+        THEME_SOMBRE.innerHTML === '🌞';
+    }
+    else {
+        THEME_SOMBRE.innerHTML === '🌚'
+    }
+});
 
-// const LINKS = document.getElementById('links');
-// const BURGER = document.getElementById('burger');
+const LINKS = document.getElementById('links');
+const BURGER = document.getElementById('burger');
 
-// BURGER.addEventListener('click', () => {
-//     LINKS.classList.toggle('active');
-// });
+BURGER.addEventListener('click', () => {
+    LINKS.classList.toggle('active');
+});
 
 //jeux de cartes (memory game)
 document.addEventListener('DOMContentLoaded', () => {
