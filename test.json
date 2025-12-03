@@ -1,0 +1,236 @@
+{
+  "test": {
+    "titre": "Quelle Pierre Précieuse Vous Ressemble ?",
+    "description": "Découvrez la pierre qui correspond à votre personnalité",
+    "questions": [
+      {
+        "id": 1,
+        "question": "Quel mot vous décrit le mieux ?",
+        "options": [
+          {
+            "texte": "🔥 Passionné(e)",
+            "type": "rubis"
+          },
+          {
+            "texte": "💚 Calme",
+            "type": "emeraude"
+          },
+          {
+            "texte": "💙 Sage",
+            "type": "saphir"
+          },
+          {
+            "texte": "💎 Brillant(e)",
+            "type": "diamant"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "question": "Quelle est votre activité préférée ?",
+        "options": [
+          {
+            "texte": "🎨 Créer et imaginer",
+            "type": "amethyste"
+          },
+          {
+            "texte": "📚 Apprendre et découvrir",
+            "type": "saphir"
+          },
+          {
+            "texte": "🌊 Me détendre dans la nature",
+            "type": "aigue-marine"
+          },
+          {
+            "texte": "🎉 Sortir et socialiser",
+            "type": "citrine"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "question": "Comment gérez-vous le stress ?",
+        "options": [
+          {
+            "texte": "💪 J'affronte le problème",
+            "type": "rubis"
+          },
+          {
+            "texte": "🧘 Je médite et respire",
+            "type": "jade"
+          },
+          {
+            "texte": "💭 J'analyse la situation",
+            "type": "saphir"
+          },
+          {
+            "texte": "😊 J'en ris et relativise",
+            "type": "citrine"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "question": "Quelle qualité admirez-vous chez les autres ?",
+        "options": [
+          {
+            "texte": "❤️ La loyauté",
+            "type": "rubis"
+          },
+          {
+            "texte": "🌟 La sagesse",
+            "type": "emeraude"
+          },
+          {
+            "texte": "✨ La créativité",
+            "type": "opale"
+          },
+          {
+            "texte": "💎 L'authenticité",
+            "type": "diamant"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "question": "Quel est votre environnement idéal ?",
+        "options": [
+          {
+            "texte": "🏔️ Les montagnes",
+            "type": "saphir"
+          },
+          {
+            "texte": "🌊 La mer",
+            "type": "aigue-marine"
+          },
+          {
+            "texte": "🌲 La forêt",
+            "type": "emeraude"
+          },
+          {
+            "texte": "🏙️ La ville",
+            "type": "diamant"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "question": "Comment prenez-vous vos décisions ?",
+        "options": [
+          {
+            "texte": "💓 Avec mon cœur",
+            "type": "rubis"
+          },
+          {
+            "texte": "🧠 Avec ma tête",
+            "type": "saphir"
+          },
+          {
+            "texte": "🔮 Avec mon intuition",
+            "type": "amethyste"
+          },
+          {
+            "texte": "⚖️ En pesant le pour et le contre",
+            "type": "jade"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "question": "Quel est votre plus grand rêve ?",
+        "options": [
+          {
+            "texte": "💑 Trouver le grand amour",
+            "type": "rubis"
+          },
+          {
+            "texte": "🌍 Voyager partout dans le monde",
+            "type": "aigue-marine"
+          },
+          {
+            "texte": "💰 Réussir professionnellement",
+            "type": "citrine"
+          },
+          {
+            "texte": "☮️ Vivre en harmonie",
+            "type": "emeraude"
+          }
+        ]
+      }
+    ],
+    "pierres": {
+      "rubis": {
+        "nom": "RUBIS",
+        "icon": "❤️",
+        "couleur": "Rouge passion",
+        "element": "Feu",
+        "personnalite": "Vous êtes une personne passionnée, courageuse et pleine d'énergie. Vous suivez votre cœur et n'avez pas peur de montrer vos émotions. Votre détermination est votre plus grande force.",
+        "raison": "Le rubis symbolise l'amour, la passion et la vitalité. Comme cette pierre ardente, vous inspirez et motivez les autres par votre enthousiasme contagieux."
+      },
+      "emeraude": {
+        "nom": "ÉMERAUDE",
+        "icon": "💚",
+        "couleur": "Vert apaisant",
+        "element": "Terre",
+        "personnalite": "Vous êtes calme, sage et profondément connecté à la nature. Vous cherchez l'harmonie dans tout ce que vous faites et avez un grand sens de l'équilibre.",
+        "raison": "L'émeraude représente la sagesse, la renaissance et l'harmonie. Comme cette pierre majestueuse, vous apportez paix et sérénité autour de vous."
+      },
+      "saphir": {
+        "nom": "SAPHIR",
+        "icon": "💙",
+        "couleur": "Bleu profond",
+        "element": "Air",
+        "personnalite": "Vous êtes intelligent(e), réfléchi(e) et avez soif de connaissance. Votre sagesse et votre jugement font de vous quelqu'un de fiable et respecté.",
+        "raison": "Le saphir symbolise la sagesse, la vérité et la loyauté. Comme cette pierre royale, vous êtes une source de conseils précieux pour votre entourage."
+      },
+      "diamant": {
+        "nom": "DIAMANT",
+        "icon": "💎",
+        "couleur": "Éclat pur",
+        "element": "Lumière",
+        "personnalite": "Vous êtes authentique, brillant(e) et indestructible. Vous ne vous laissez pas influencer et restez fidèle à vous-même en toutes circonstances.",
+        "raison": "Le diamant représente la pureté, la force et l'éternité. Comme cette pierre inaltérable, vous brillez de mille feux et résistez aux épreuves."
+      },
+      "amethyste": {
+        "nom": "AMÉTHYSTE",
+        "icon": "💜",
+        "couleur": "Violet mystique",
+        "element": "Esprit",
+        "personnalite": "Vous êtes créatif(ve), intuitif(ve) et spirituel(le). Vous avez une imagination débordante et une connexion profonde avec votre monde intérieur.",
+        "raison": "L'améthyste symbolise la créativité, l'intuition et la spiritualité. Comme cette pierre mystique, vous voyez au-delà des apparences."
+      },
+      "aigue-marine": {
+        "nom": "AIGUE-MARINE",
+        "icon": "💧",
+        "couleur": "Bleu océan",
+        "element": "Eau",
+        "personnalite": "Vous êtes fluide, adaptable et rêveur(se). Vous aimez la liberté et les voyages. Votre nature calme apaise ceux qui vous entourent.",
+        "raison": "L'aigue-marine représente la sérénité, le courage et la communication. Comme l'océan, vous êtes à la fois calme et puissant(e)."
+      },
+      "citrine": {
+        "nom": "CITRINE",
+        "icon": "☀️",
+        "couleur": "Jaune doré",
+        "element": "Soleil",
+        "personnalite": "Vous êtes optimiste, joyeux(se) et attirez naturellement le succès. Votre énergie positive est contagieuse et inspire les autres.",
+        "raison": "La citrine symbolise l'abondance, la joie et le succès. Comme le soleil, vous illuminez la vie de ceux qui vous entourent."
+      },
+      "jade": {
+        "nom": "JADE",
+        "icon": "🍃",
+        "couleur": "Vert jade",
+        "element": "Équilibre",
+        "personnalite": "Vous êtes équilibré(e), patient(e) et recherchez l'harmonie. Votre sagesse tranquille et votre sens de la justice sont remarquables.",
+        "raison": "Le jade représente l'équilibre, la chance et la longévité. Comme cette pierre vénérée, vous apportez stabilité et prospérité."
+      },
+      "opale": {
+        "nom": "OPALE",
+        "icon": "🌈",
+        "couleur": "Multicolore",
+        "element": "Magie",
+        "personnalite": "Vous êtes unique, mystérieux(se) et plein(e) de surprises. Vous changez et évoluez constamment, comme un arc-en-ciel.",
+        "raison": "L'opale symbolise la créativité, la transformation et l'imagination. Comme cette pierre aux mille reflets, vous êtes complexe et fascinant(e)."
+      }
+    }
+  }
+}

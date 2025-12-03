@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quelle pierre précieuse me ressemble ?</title>
+    <link rel="stylesheet" href="./test.css">
+    <script defer src="./test.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+<body>
+      <header>
+        <nav>
+            <div>
+                <img src="" alt="">
+            </div>
+            <div>
+                <ul class="links" id="links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="#informations">Informations</a></li>
+                    <li><a href="./jeux.html">Jeux</a></li>
+                    <li><a href="#pierres">Pierres</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <button id="sombre" class="">🌙</button>
+            </div>
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    
+     <div class="container">
+        <!-- ÉCRAN DE DÉMARRAGE -->
+        <div id="start-screen" class="screen active">
+            <div class="header">
+                <div class="header-icon">💎</div>
+                <h1>Quelle Pierre Précieuse Vous Ressemble ?</h1>
+                <p class="subtitle">Découvrez la pierre qui correspond à votre personnalité en répondant à 7 questions</p>
+            </div>
+            <button class="btn btn-primary" onclick="startTest()">Commencer le Test</button>
+        </div>
+
+        <!-- ÉCRAN DES QUESTIONS -->
+        <div id="question-screen" class="screen">
+            <div class="question-header">
+                <div class="question-number" id="question-number">Question 1/7</div>
+                <div class="question-text" id="question-text"></div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+            </div>
+            <div class="options" id="options-container"></div>
+        </div>
+
+        <!-- ÉCRAN DU RÉSULTAT -->
+        <div id="result-screen" class="screen">
+            <div class="result-content">
+                <div class="result-icon" id="result-icon">💎</div>
+                <div class="result-pierre" id="result-pierre"></div>
+                <div class="result-subtitle" id="result-subtitle"></div>
+
+                <div class="result-properties" id="result-properties"></div>
+
+                <div class="result-card">
+                    <h3>✨ Votre Personnalité</h3>
+                    <p id="result-personnalite"></p>
+                </div>
+
+                <div class="result-card">
+                    <h3>💫 Pourquoi Cette Pierre ?</h3>
+                    <p id="result-raison"></p>
+                </div>
+
+                <button class="btn btn-primary" onclick="restartTest()">Recommencer le Test</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
