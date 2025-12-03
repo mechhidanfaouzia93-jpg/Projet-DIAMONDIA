@@ -47,95 +47,66 @@ BUTTONS.forEach((button) => {
     });
 });
 
-
-// ===== SYSTÈME DE COMMENTAIRES (si besoin) =====
-const sendBtn = document.getElementById('sendBtn');
-
-if (sendBtn) {
-    sendBtn.addEventListener('click', () => {
-        const type = document.getElementById('type').value;
-        const content = document.getElementById('content').value.trim();
-        
-        if (!content) {
-            alert('Veuillez entrer un commentaire !');
-            return;
-        }
-        
-        // Créer le commentaire
-        const commentsList = document.getElementById('commentsList');
-        
-        if (commentsList) {
-            const commentDiv = document.createElement('div');
-            commentDiv.className = 'comment-item';
-            commentDiv.innerHTML = `
-                <strong>${type}</strong>
-                <p>${content}</p>
-                <small>${new Date().toLocaleString('fr-FR')}</small>
-            `;
-            
-            commentsList.appendChild(commentDiv);
-            
-            // Réinitialiser le formulaire
-            document.getElementById('content').value = '';
-            
-            alert('Commentaire envoyé avec succès !');
-        }
-    });
-}
-
-
-// Charger les commentaires ou créer une liste vide
+// Charger les commentaires depuis localStorage
 let comments = JSON.parse(localStorage.getItem("comments")) || [];
 
 const typeInput = document.getElementById("type");
 const contentInput = document.getElementById("content");
 const commentsList = document.getElementById("commentsList");
+const sendBtn = document.getElementById("sendBtn");
 
-// Affiche tous les commentaires
+// =======================
+// AFFICHER LES COMMENTAIRES
+// =======================
 function displayComments() {
     commentsList.innerHTML = "";
 
     comments.forEach((comment, index) => {
+
         const div = document.createElement("div");
         div.classList.add("comment");
 
-    //     const span = document.createElement('span');
-    //     const button= document.createElement('button');
-    //     span.textContent = comment.type.toUpperCase() + "-" +comment.date;
-    //     button.textContent = "supprimer";
-    //     button.setAttribute('data-index',index);
+        // TYPE
+        const spanType = document.createElement("span");
+        spanType.textContent = comment.type.toUpperCase();
 
-    //     const span = document.createElement('span');
-    //     const button= document.createElement('button');
-    //     span.textContent = comment.type.toUpperCase() + "-" +comment.date;
-    //     button.textContent = "supprimer";
-    //     button.setAttribute('data-index',index);
-    //     button.classList.add('delete-btn');
+        // DATE
+        const spanDate = document.createElement("span");
+        spanDate.textContent = " - " + comment.date;
 
-    //    div.appendChild(span,button)
-        
+        // BR
+        const br = document.createElement("br");
 
-    //     div.innerHTML = `
-    //         <span>${comment.type.toUpperCase()}</span> - ${comment.date}<br>
-    //         ${comment.text}
-    //         <button class="delete-btn" data-index="${index}">Supprimer</button>
-    //     `;
+        // TEXTE
+        const spanText = document.createElement("span");
+        spanText.textContent = comment.text;
 
+        // BOUTON SUPPRIMER
+        const button = document.createElement("button");
+        button.textContent = "Supprimer";
+        button.classList.add("delete-btn");
+        button.dataset.index = index;
+
+        // ASSEMBLER
+        div.append(spanType, spanDate, br, spanText, button);
+
+        // AJOUTER AU CONTAINER
         commentsList.appendChild(div);
     });
 
-    // Ajouter l'événement de suppression aux boutons
-    const deleteBtns = document.querySelectorAll('.delete-btn');
-    deleteBtns.forEach(btn => {
-        btn.addEventListener('click', deleteComment);
+    // Ajouter les events de suppression
+    document.querySelectorAll(".delete-btn").forEach(btn => {
+        btn.addEventListener("click", deleteComment);
     });
 }
 
-// Fonction pour envoyer le commentaire
-sendBtn.onclick = () => {
+// =======================
+// ENVOYER UN COMMENTAIRE
+// =======================
+sendBtn.addEventListener("click", () => {
     const text = contentInput.value.trim();
 
-    if (text === "") {
+    if (!text) {
         alert("Veuillez écrire quelque chose !");
         return;
     }
@@ -143,45 +114,33 @@ sendBtn.onclick = () => {
     const newComment = {
         type: typeInput.value,
         text: text,
-        date: new Date().toLocaleString()  // On récupère la date et l'heure locales
+        date: new Date().toLocaleString()
     };
 
-    // Ajout dans la liste
     comments.push(newComment);
 
-    // Sauvegarde JSON locale dans localStorage
+    // Sauvegarde locale
     localStorage.setItem("comments", JSON.stringify(comments));
 
-    // Réaffichage des commentaires
     displayComments();
 
-    // On vide les champs du formulaire
     contentInput.value = "";
-    typeInput.value = "message";  // Option par défaut
-};
+    typeInput.value = "message";
+});
 
-// Fonction pour supprimer un commentaire
-function deleteComment(event) {
-    const index = event.target.dataset.index;  // On récupère l'index du commentaire à supprimer
-
-    // Supprimer le commentaire à l'index donné
+// =======================
+// SUPPRIMER UN COMMENTAIRE
+// =======================
+function deleteComment(e) {
+    const index = e.target.dataset.index;
     comments.splice(index, 1);
 
-    // Sauvegarder la liste mise à jour dans localStorage
     localStorage.setItem("comments", JSON.stringify(comments));
 
-    // Réafficher la liste des commentaires après la suppression
     displayComments();
 }
 
-// Affiche les commentaires au chargement de la page
+// =======================
+// AFFICHER AU CHARGEMENT
+// =======================
 displayComments();
-
-
-
-
-
-
-
-
-     
