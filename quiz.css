@@ -110,19 +110,20 @@ header {
         background-color: var(--blue-profond);
         padding: 2rem;
         color: white;
+        li:hover {
+            background-color: white;
+            color: var(--blue-profond);
+            transition: all 200ms ease;
+        }
+        .active {
+            display: flex;
+        }
+    
 
     }
 
-    .links li:hover {
-        background-color: white;
-        color: var(--blue-profond);
-        transition: all 200ms ease;
-    }
-
-    .links.active {
-        display: flex;
-    }
-
+    
+   
     .burger {
         display: flex;
     }

@@ -32,17 +32,17 @@ BUTTONS.forEach((button) => {
     button.addEventListener('click', (e) => {
         const direction = e.target.id === "next" ? 1 : -1;
 
-        //         // Trouver la slide active
+            // Trouver la slide active
         const currentActive = document.querySelector('.slide.active');
         let currentIndex = Array.from(SLIDES).indexOf(currentActive);
 
-        //         // Calculer le nouvel index
+          // Calculer le nouvel index
         const newIndex = (currentIndex + direction + SLIDES.length) % SLIDES.length;  // S'assure de revenir au début ou à la fin
 
-        //         // Retirer la classe 'active' de la slide actuelle
+          // Retirer la classe 'active' de la slide actuelle
         currentActive.classList.remove('active');
 
-        //         // Ajouter la classe 'active' à la nouvelle slide
+               // Ajouter la classe 'active' à la nouvelle slide
         SLIDES[newIndex].classList.add('active');
     });
 });
