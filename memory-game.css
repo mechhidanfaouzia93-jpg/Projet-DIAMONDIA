@@ -7,7 +7,7 @@
 
 :root {
     --bg: #f2f2f2;
-    --blue-profond: #3763a1;
+    --blue-profond: #1e3a8a;
     /*Header,boutons,titres*/
     --bleu-clair: #2da6d4;
     /*Survols, reflets*/
@@ -241,3 +241,22 @@ span {
 .card.flip .back-view {
     transform: rotateY(0);
 }
+
+footer {
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .socials {
+        display: flex;
+        flex-direction: row;
+
+        gap: 0.5rem;
+
+        i {
+            color: var(--blue-profond);
+            font-size: 1.2rem;
+        }
+    }
+};
