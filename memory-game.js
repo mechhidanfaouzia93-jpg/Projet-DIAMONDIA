@@ -1,17 +1,13 @@
 //theme sombre fuction
 
-const THEME_SOMBRE = document.getElementById('sombre');
+document.addEventListener("DOMContentLoaded", () => {
+    const THEME_SOMBRE = document.getElementById('sombre');
 
-THEME_SOMBRE.addEventListener('click', () => {
-    const SOMBRE = document.body;
-
-    SOMBRE.classList.toggle('sombre');
-    if (THEME_SOMBRE.innerHTML === '🌚') {
-        THEME_SOMBRE.innerHTML === '🌞';
-    }
-    else {
-        THEME_SOMBRE.innerHTML === '🌚'
-    }
+    THEME_SOMBRE.addEventListener('click', () => {
+        document.body.classList.toggle('sombre');
+        THEME_SOMBRE.textContent =
+            THEME_SOMBRE.textContent === '🌚' ? '🌞' : '🌚';
+    });
 });
 
 const LINKS = document.getElementById('links');

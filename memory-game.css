@@ -69,14 +69,15 @@ header {
             }
         }
 
-        /*btn lune*/
-        #sombre {
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-            font-size: 2rem;
-        }
+     
     }
+}
+   /*btn lune*/
+   #sombre {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
 }
 
 /*menu burger*/

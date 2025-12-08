@@ -3,16 +3,29 @@
 const THEME_SOMBRE = document.getElementById('sombre');
 
 THEME_SOMBRE.addEventListener('click', () => {
-    const SOMBRE = document.body;
+    document.body.classList.toggle('sombre');
 
-    SOMBRE.classList.toggle('sombre');
-    if (THEME_SOMBRE.innerHTML === '🌚') {
-        THEME_SOMBRE.innerHTML === '🌞';
+    // THEME_SOMBRE.textContent === '🌚' ? '🌞' : '🌚';
+
+    if (THEME_SOMBRE.textContent === '🌚') {
+        THEME_SOMBRE.textContent = '🌞';
     }
     else {
-        THEME_SOMBRE.innerHTML === '🌚'
+        THEME_SOMBRE.textContent = '🌚'
     }
 });
+
+// document.addEventListener("DOMContentLoaded", () => {
+//     const THEME_SOMBRE = document.getElementById('sombre');
+
+//     THEME_SOMBRE.addEventListener('click', () => {
+//         document.body.classList.toggle('sombre');
+        
+          
+//     });
+// });
+
+
 
 const LINKS = document.getElementById('links');
 const BURGER = document.getElementById('burger');

@@ -72,15 +72,19 @@ header {
             }
         }
 
-        /*btn lune*/
-        #sombre {
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-            font-size: 2rem;
-        }
+       
+       
     }
-}
+     /*btn lune*/
+    #sombre {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 2rem;
+    }
+};
+
+
 
 /*menu burger*/
 .burger {
@@ -604,56 +608,6 @@ form {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 footer {
     padding: 0.5rem 1rem;
     display: flex;
@@ -671,4 +625,4 @@ footer {
             font-size: 1.2rem;
         }
     }
-}
+};
